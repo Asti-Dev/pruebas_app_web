@@ -183,3 +183,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Bootstrap 4*/ 
+
+// Incluir Bootstrap CSS
+function bootstrap_css() {
+	wp_enqueue_style( 'bootstrap_css', 
+					'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', 
+  					array(), 
+  					'4.5.0'
+  					); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_css');
+
+
+// Incluir Bootstrap JS y dependencia popper
+function bootstrap_js() {
+	wp_enqueue_script( 'popper_js', 
+  					'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', 
+  					array(), 
+  					'1.16.0', 
+  					true); 
+	wp_enqueue_script( 'bootstrap_js', 
+  					'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', 
+  					array('jquery','popper_js'), 
+  					'4.5.0', 
+  					true); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_js');

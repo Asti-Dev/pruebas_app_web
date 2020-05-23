@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -25,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pruebas_app_web' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header nav justify-content-center">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
