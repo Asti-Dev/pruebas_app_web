@@ -10,6 +10,8 @@
  */
 
 ?>
+	</div> <!-- cierro el row que abri en header  -->
+	</div> <!--   cierro contenedor del header -->
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">

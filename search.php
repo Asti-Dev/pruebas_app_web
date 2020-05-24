@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+<div id="primary" class="content-area col-md-8">
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -47,7 +47,7 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+</div><!-- #primary -->
 <?php
 get_sidebar();
 get_footer();
